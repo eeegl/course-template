@@ -1,0 +1,89 @@
+Unit_name: Unit 1 test
+Page_name: What is parallelism and concurrency?
+
+1. Concurrency in programming is best described as:
+    A) Running multiple tasks at the exact same moment. 
+    - Incorrect. This definition refers to parallelism wherein execution of tasks happen at the exact same time.
+    B) Handling many tasks at the same time, regardless of whether they're executed at the same moment.
+    - Correct. Concurrency involves managing multiple tasks, which may or may not share the exact moment of execution.
+    C) Executing programming instructions one after the other in the order they are written.
+    - Incorrect. You've actually described sequential programming, a different approach entirely.
+
+2. Parallelism in the context of programming can be best defined as:
+    A) Executing tasks one after the other.
+    - Incorrect. You are referring to sequential programming where operations are performed one after another.
+    B) Handling multiple tasks simultaneously, regardless if they are executed at the same moment.
+    - Incorrect. Parallelism involves executing multiple tasks at the same moment, which is different from handling them.
+    C) Running multiple tasks at the exact same moment.
+    - Correct. Parallel programming focuses on the simultaneous execution of tasks.
+
+3. Which of the following best represents the concept of sequential programming?
+    A) Executing programming instructions one after the other in the order they are written.
+    - Correct. Sequential programming involves executing operations one after another in the order they're written.
+    B) Running multiple tasks at the exact same moment.
+    - Incorrect. You've described parallel programming, not sequential programming.
+    C) Handling many tasks simultaneously, regardless of whether they're executed at the same moment.
+    - Incorrect. You are referring to concurrent programming which involves managing multiple tasks in an overlapping manner.
+
+4. Consider the following scenario: a web server handling multiple client requests. What advantage does concurrent programming offer in this context?
+    A) It handles all client requests at the exact same moment.
+    - Incorrect. This describes parallel programming. Concurrent programming may not necessarily handle all tasks at the exact same moment.
+    B) It ensures sequential execution of requests thus making debugging easier.
+    - Incorrect. This attribute is emphasized in sequential programming, not concurrency.
+    C) It manages multiple client requests efficiently even if they don't execute simultaneously.
+    - Correct. Concurrent programming can improve server responsiveness by managing multiple client requests at once.
+
+5. Let's analyze the following Go code snippet:
+   ```
+   var a [10]int 
+   for i := 0; i < 10; i++ {
+     a[i] = i+1
+   }
+   ``` 
+   Which programming paradigm does it showcase?
+    A) Concurrent programming.
+    - Incorrect. The Go code snippet shown does not use any constructs that allow for concurrency, such as goroutines or channels.
+    B) Parallel programming.
+    - Incorrect. The code does not feature any elements of parallel execution, like goroutines running synchronously.
+    C) Sequential programming.
+    - Correct. This code snippet indicates sequential programming, following the order each operation is written.
+
+6. When programming in Go, we utilize goroutines to implement which programming paradigm?
+    A) Concurrent programming.
+    - Correct. Goroutines are the backbone of concurrency in Go, allowing for efficient management of multiple tasks.
+    B) Sequential programming.
+    - Incorrect. Goroutines enhance Go's ability to handle multiple tasks at once and are not involved in executing one task after another.
+    C) Parallel programming.
+    - Incorrect. While goroutines can operate in parallel with a multi-core processor, their primary purpose is to allow for concurrent, not parallel.
+
+7. In Go, what is the primary purpose of channels?
+    A) To implement sequential programming.
+    - Incorrect. Channels are not specific to sequential programming.
+    B) To implement parallel programming.
+    - Incorrect. Channels help in managing data communication between goroutines, which is a characteristic of concurrent programming.
+    C) To facilitate communication between goroutines in concurrent programming.
+    - Correct. Channels in Go are crucial for communication and data sharing between concurrently running goroutines.
+
+8. Which keyword is used to initiate a goroutine in Go?
+    A) `go`.
+    - Correct. In Go, we use the `go` keyword to initiate a new goroutine.
+    B) `goroutine`.
+    - Incorrect. 'goroutine' is the term used to refer to threads in Go, but it isn't the keyword to initiate a new goroutine.
+    C) `goRoutine`.
+    - Incorrect. 'goRoutine' is not a valid keyword in Go.
+
+9. Given its role in concurrent programming, what is the primary benefit of using a Go channel?
+    A) It allows for efficient task management.
+    - Incorrect. While channels do contribute to concurrency, the primary function is not task management but inter-goroutine communication.
+    B) It provides a conduit for goroutines to share and communicate data.
+    - Correct. Channels in Go facilitate data sharing and communication between goroutines.
+    C) It ensures simultaneous execution of multiple tasks.
+    - Incorrect. Channels are not responsible for simultaneous task execution.
+
+10. What is the effect of using the `range` keyword on a Go-lang channel?
+    A) Blocks the goroutine until the channel has data to read.
+    - Correct. The `range` keyword will block a goroutine until there is data in the channel.
+    B) Triggers multiple executions of the goroutine.
+    - Incorrect. The `range` keyword reads data from a channel and does not control the execution frequency of goroutines.
+    C) Creates a new channel.
+    - Incorrect. The `range` keyword does not create channels. It operates on existing ones to read data.
