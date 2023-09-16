@@ -1,7 +1,7 @@
 Unit_name: Unit 1 test
 Page_name: What is parallelism and concurrency?
 
-1. Concurrency in programming is best described as:
+1. Concurrency in programming is best described as follows:
     A) Running multiple tasks at the exact same moment. 
     - Incorrect. This definition refers to parallelism wherein execution of tasks happen at the exact same time.
     B) Handling many tasks at the same time, regardless of whether they're executed at the same moment.
