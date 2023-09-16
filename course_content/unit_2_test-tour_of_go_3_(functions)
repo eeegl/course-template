@@ -1,0 +1,114 @@
+Unit_name: Unit 2 test
+Page_name: Tour of Go 3 (Functions)
+
+1. What does "func" stand for in Golang?
+
+    A) function
+    - Correct. This is a keyword in the Golang language used to define or declare a function.
+
+    B) functionality
+    - Incorrect. It seems you've extrapolated from "func" to "functionality", but in the context of Golang, "func" signifies the declaration or definition of a function.
+
+    C) functional
+    - Incorrect. Despite "functional" being related to programming concepts, the keyword "func" in Golang specifically refers to function declarations.
+
+2. In the following Golang function, how many arguments does the function take?
+
+```go
+func add(a int, b int) int {
+    return a + b
+}
+```
+    A) One
+    - Incorrect. Check the function declaration. Each variable inside the round brackets is an argument.
+
+    B) Two
+    - Correct. The function `add` takes two arguments: `a` and `b`.
+
+    C) Three
+    - Incorrect. It seems like you've included the return value in your count. However, this is not counted as an argument to the function.
+
+3. What is a variadic function in Golang?
+
+    A) A function that varies its return type based on input. 
+    - Incorrect. The return type of a function in Golang is defined at compile time and does not vary based on input. A variadic function is one that can accept a variable number of arguments.
+    
+    B) A function that accepts a variable number of arguments.
+    - Correct. In Golang, variadic functions can accept any number of arguments, hence the term 'variadic'.
+
+    C) A function that can only take a slice as an argument.
+   - Incorrect. While slices are often used with variadic functions, this definition is restrictive. A variadic function can take in any number of arguments, not limited to a slice.
+
+4. Consider the following Golang function. How many values does the function return?
+
+```go
+func swap(x, y int) (int, int) {
+    return y, x
+}
+```
+    A) None
+   - Incorrect. The function returns two values: `y` and `x`. It swaps the two inputted integers.
+
+    B) One
+    - Incorrect. While functions in many languages can only return one value, Golang functions can return multiple values. And, in this case, it returns two integers.
+
+    C) Two
+    - Correct. The function `swap` returns `y` and `x`, i.e., two values.
+
+5. Can a function in Golang take another function as an argument?
+
+    A) Yes, this is called a higher order function.
+    - Correct. Functions that can take other functions as arguments are called higher-order functions in Golang.
+
+    B) No, this is not possible in Go.
+    - Incorrect. It seems like you're under the impression that functions can't be parameters, but they can. Functions that can take other functions as arguments are called higher-order functions in Golang.
+
+    C) Yes, this is called a lower order function.
+   - Incorrect. It seems like there's some confusion with the terminology. The correct term for a function that can take another function as an argument is a higher order function, not a lower order function.
+
+1. How would you declare a simple Variadic function in Go?
+
+    A) `func variadicFunc(args ...int) {...}`
+    - Correct. This is how you declare a variadic function taking integer parameters in Go.
+    B) `func variadicFunc(args int...) {...}`
+    - Incorrect. The ellipsis should precede the parameter's type, not the parameter's name.
+    C) `func variadicFunc(...args int) {...}`
+    - Incorrect. The ellipsis comes after the parameter name, not before.
+
+2. What happens if you try to declare a Variadic function with more than one variadic parameter?
+
+    A) You get a syntax error.
+    - Correct. You'll get a syntax error because Go does not allow more than one variadic parameter in a function.
+    B) The function will receive an array of arrays.
+    - Incorrect. The compiler will throw a syntax error, since Go does not support multiple variadic parameters for functions.
+    C) The function works, but handles all arguments as a single variadic parameter.
+    - Incorrect. You'll get a syntax error because Go does not allow you to declare multiple variadic parameters in a function.
+
+3. Can other arguments exist in a Variadic function?
+
+    A) Yes, but variadic arguments must be the last argument.
+    - Correct. Other arguments can exist, but they must be placed before the variadic parameter.
+    B) No, only variadic arguments can exist.
+    - Incorrect. Other arguments can exist in a variadic function, but the variadic parameter needs to be the last one.
+    C) Yes, and variadic arguments can be placed anywhere.
+    - Incorrect. While other arguments can exist, the variadic argument must be the last.
+
+4. How does Go handle the list of arguments in Variadic functions at the time of calling?
+
+    A) It maintains them as a list.
+    - Incorrect. Go doesn't maintain them as a list. It transforms the list of arguments into a slice.
+    B) It converts the list of arguments to a slice of the type of the variadic parameter.
+    - Correct. Go intelligently transforms the list of arguments into a slice of the variadic parameter type at the time of calling.
+    C) It converts the list of arguments to an array.
+    - Incorrect. Go doesn't convert the list of arguments into an array, but a slice.
+
+5. What needs to be done to use a variadic function with slices?
+
+    A) Call the function with the slice as an argument.
+    - Incorrect. If you call the function with a slice as is, it will cause a compile-time error.
+    B) Use the ellipsis operator when calling the function.
+    - Correct. To use a slice as an argument for a variadic function, you need to append `...` to the slice when passing it in.
+    C) Loop over the slice elements and call the function one by one.
+    - Incorrect. Looping over the slice and calling the function for each element is possible but is not what is meant by using a variadic function with a slice.
+  
+[Continued in the same format for questions 6 through 10...]
